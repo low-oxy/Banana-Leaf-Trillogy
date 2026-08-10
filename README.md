@@ -10,7 +10,6 @@ A multi-task deep learning system that simultaneously classifies **banana variet
 
 Farmers in the field need fast, offline answers to three questions from one photo: *What variety is this? Is it diseased? Is it nutrient-deficient?* Training three separate models is wasteful — this project uses a **shared backbone with task-specific heads**, so the network learns general visual features once and specializes only at the final layers. This cuts inference cost for on-device deployment while letting related tasks (e.g. deficiency symptoms and disease symptoms often look visually similar) reinforce each other during training.
 
-```
 - **Sharing strategy**: Hard parameter sharing — forces the network to learn generalizable visual features across all three tasks through a shared bottleneck
 - **Training**: Two-phase — frozen backbone feature extraction, then selective fine-tuning with BatchNorm layers kept frozen to avoid corrupting running statistics on small batches
 - **Loss weighting**: Data-volume-based heuristic (inverse frequency of labeled samples per task), with uncertainty weighting (Kendall et al., CVPR 2018) under evaluation
