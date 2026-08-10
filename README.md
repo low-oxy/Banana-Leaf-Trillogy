@@ -48,9 +48,9 @@ pip install -r requirements.txt
 ```
 
 Dataset sources (not redistributed here — check each source's license before use):
-- PSFD-Musa: [link]
-- Karnataka Nutrient Deficiency Dataset: [link]
-- Kaggle Banana Disease Recognition: [link]
+- PSFD-Musa: [https://www.sciencedirect.com/science/article/pii/S2352340922006242]
+- Karnataka Nutrient Deficiency Dataset: [https://pmc.ncbi.nlm.nih.gov/articles/PMC10165221/]
+- Kaggle Banana Disease Recognition: [https://huggingface.co/datasets/as-cle-bert/banana-disease-classification]
 
 Place downloaded datasets under `data/` (already gitignored) and run the preprocessing cells in `banana.ipynb` to generate the merged label CSV.
 ## Tech Stack
